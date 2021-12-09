@@ -1,15 +1,18 @@
 import { StatusBar } from "expo-status-bar";
 // import React from "react";
-// import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 import Books from "./components/books.js";
 import ReactNative, { Component } from "react-native";
-// import React from "react";
-import { Router, Route } from "react-native-router-flux";
+import React from "react";
+import { Router, Route, Scene } from "react-native-router-flux";
+import BookList from "./components/books.js";
 
 export default function App() {
   return (
     <Router>
-      <Route path="/" component={Books} />
+      <Scene>
+        <Route path="/" component={BookList} />
+      </Scene>
     </Router>
   );
 
